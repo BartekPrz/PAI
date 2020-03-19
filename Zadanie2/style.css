@@ -1,0 +1,144 @@
+* {
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px;
+    font-weight: 0;
+    text-decoration: none;
+    color: black;
+}
+
+html, body, p {
+    margin: 0px;
+    padding: 0px;
+}
+
+header, main, footer {
+    display: flex;
+    flex-direction: row;
+}
+
+header {
+    padding: 30px;
+    align-items: center;
+}
+
+#title {
+    margin-left: 15px;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+nav {
+    flex-grow: 2;
+    align-self: flex-start;
+    display: flex;
+    justify-content: flex-end;
+}
+ a {
+     width: 75px;
+ }
+
+ #logo {
+     border: black solid 2px;
+     width: 75px;
+     height: 75px;
+     border-radius: 50%;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     font-weight: bold;
+     font-size: 32px;
+     background-color: lightgray;
+ }
+
+ main { 
+     padding: 15px;
+ }
+
+ article {
+     margin: 15px;
+     width: 100%;
+     border: black solid 2px;
+     display: flex;
+     flex-direction: column;
+ }
+
+article .header {
+     height: 50px;
+     width: 50%;
+     font-size: 1.5em;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     align-self: flex-end;
+     border-left: black solid 2px;
+     border-bottom: black solid 2px;
+     background-color: lightgray;
+ }
+
+ article p {
+    text-align: justify;
+    padding: 15px;
+}
+
+footer {
+    height: 100px;
+    background-color: lightgray;
+    border-top: black solid 2px;
+    margin-top: 15px;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+#project {
+    text-align: center;
+}
+#name {
+    font-weight: bold;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    flex: 1 0 auto;
+}
+
+#menu {
+    display: none;
+}
+
+@media all and (max-width: 900px) {
+    main {
+        flex-wrap: wrap;
+    }
+
+    header {
+        display: flex;
+        flex-direction: row;
+        padding: 30px;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    #title, nav {
+        display: none;
+    }
+    
+    #menu img {
+        width: 75px;
+        height: 75px;
+    }
+
+    #menu {
+        display: block;
+    }
+
+}

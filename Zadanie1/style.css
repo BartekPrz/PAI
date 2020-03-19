@@ -1,0 +1,50 @@
+* { font-family: Tahoma }
+body { margin: 5em 10em 5em 10em }
+p { text-align: justify }
+h1 {color: yellow;}
+
+li {
+    list-style-type: square;
+}
+
+#cena {
+    color: red;
+    font-weight: bold;
+}
+
+.wstep {
+    font-style: italic;
+}
+
+td img:hover {
+    border-style: solid;
+    border-color: red;
+}
+
+td img {
+    border-style: solid;
+    border-color: blue;
+}
+
+h1+h2 {
+    letter-spacing: 5px;
+}
+
+td[colspan="2"] p {
+   font-size: small; 
+}
+
+p+p {
+    color: gray;
+}
+
+body {
+    background-image: url(books.jpg);
+    background-repeat: repeat-y;
+}
+h1 { color: blue; }
+h1 { color: green; }
+
+#under {
+    text-decoration: underline;
+}
