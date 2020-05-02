@@ -1,0 +1,29 @@
+﻿@{
+    var rules = new List<string>();
+    if(Session["rules"] != null)
+    {
+        rules = (List<String>) Session["rules"];
+    }
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+</head>
+<body>
+    <ol>
+        @foreach(var rule in rules)
+        {
+            <li>@rule</li>
+        }
+    </ol>
+
+    <form method="POST" action="~/Redirect.cshtml">
+        <input type="text" name="rule" />
+        <input type="submit" />
+    </form>
+</body>
+</html>
