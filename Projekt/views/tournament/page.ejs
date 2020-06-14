@@ -1,0 +1,24 @@
+<%- include("../starters/header") %>
+
+<div class="container">
+    <div class="row">
+        <h1>Sprawdź wszystkie nasze turnieje!</h1>
+        <p>Wyszukaj te, które Cię interesują najbardziej!</p>
+        <form method="GET" action="/tournaments/page/1">
+            <input type="text" placeholder="Nazwa turnieju" name="name">
+            <input type="submit" value="Szukaj">
+        </form><br>
+        <ul>
+        <% tournaments.forEach(tournament => { %>
+            <li>Nazwa turnieju: <%= tournament.name %> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="/tournaments/<%= tournament.id %>">Zobacz szczegóły turnieju</a></li>
+        <% }); %>
+        </ul>
+        <% if(prev) { %>
+        <a href="/tournaments/page/<%= pageNumber - 1 %>">Poprzednia strona</a>
+        <% } if(next) { %>
+        <a href="/tournaments/page/<%= pageNumber + 1 %>">Następna strona</a>
+        <% } %>
+    </div>
+</div>
+
+<%- include("../starters/footer") %>

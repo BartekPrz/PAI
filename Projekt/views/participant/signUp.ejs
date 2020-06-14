@@ -1,0 +1,20 @@
+<%- include("../starters/header") %>
+
+<div class="container">
+    <div class="row">
+        <h1>Zapisz się na turniej!</h1>
+            <form method="POST" action="/tournaments/<%= id %>/signup">
+                <div class="form-group">
+                    Numer licencji: <input class="form-control" type="text" name="participant[licenceNumber]" placeholder="Numer licencji" required>
+                </div>
+                <div class="form-group">
+                    Aktualny ranking: <input class="form-control" type="number" name="participant[ranking]" placeholder="Logo sponsora" min="1" required>
+                </div>
+                <div class="form-group">
+                    <input class="btn btn-lg btn-primary" type="submit" value="Zapisz się!">
+                </div>
+            </form>
+    </div>
+</div>
+
+<%- include("../starters/footer") %>

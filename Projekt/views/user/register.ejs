@@ -1,0 +1,26 @@
+<%- include("../starters/header") %>
+
+<div class="container">
+    <div class="row">
+        <h1>Stwórz konto!</h1>
+            <form method="POST", action="/register">
+                <div class="form-group">
+                    <input class="form-control" type="text" name="newUser[name]" placeholder="Imię">
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="text" name="newUser[surname]" placeholder="Nazwisko">
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="email" name="newUser[email]" placeholder="Adres e-mail">
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="password" name="newUser[password]" placeholder="Hasło">
+                </div>
+                <div class="form-group">
+                    <input class="btn btn-lg btn-primary" type="submit" value="Zarejestruj się">
+                </div>
+            </form>
+            <a href="/tournaments">Powrót do strony z turniejami</a>
+    </div>
+
+<%- include("../starters/footer") %>

@@ -1,0 +1,15 @@
+<%- include("../starters/header") %>
+
+<div class="container">
+    <div class="row">
+        <h1>Twoje turnieje, w których bierzesz udział: </h1>
+        <ul>
+            <% tournaments.forEach(tournament => { %>
+                <li><a href="/tournaments/<%= tournament.id %>"><%= tournament.name %></a></li>
+            <% }); %>
+        </ul>
+        <a href="/<%= currentUser.id %>/duels">Twoje spotkania</a>
+    </div>
+</div>
+
+<%- include("../starters/footer") %>

@@ -1,0 +1,17 @@
+<%- include("../starters/header") %>
+
+<div class="container">
+    <div class="row">
+        <h1>Wprowadź wynik meczu (1:0 - wygrana, 0:1 - przegrana)</h1>
+            <form method="POST" action="/<%= currentUser.id %>/duels/<%= tournamentID %>/<%= oppID %>">
+                <div class="form-group">
+                    <input class="form-control" type="text" name="result" placeholder="Wynik meczu">
+                </div>
+                <div class="form-group">
+                    <input class="btn btn-lg btn-primary" type="submit" value="Zatwierdź wynik">
+                </div>
+            </form>
+    </div>
+</div>
+
+<%- include("../starters/footer") %>

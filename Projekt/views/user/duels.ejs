@@ -1,0 +1,17 @@
+<%- include("../starters/header") %>
+
+<div class="container">
+    <div class="row">
+        <h1>Twoje najbliższe mecze, w których bierzesz udział: </h1>
+        <ul>
+            <% duels.forEach(duel => { %>
+                <li>Turniej: <a href="/tournaments/<%= duel.tournament.id %>"><%= duel.tournament.name %></a></li>
+                Mecz przeciwko: <%= duel.name %> <%= duel.surname %><br>
+                <a href="/<%= currentUser.id %>/duels/<%= duel.tournament.id %>/<%= duel.oppID %>">Wprowadź wynik meczu</a><br><br>
+            <% }); %>
+        </ul>
+        <a href="/<%= currentUser.id %>/tournaments">Twoje turnieje</a>
+    </div>
+</div>
+
+<%- include("../starters/footer") %>

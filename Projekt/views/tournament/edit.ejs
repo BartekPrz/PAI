@@ -1,0 +1,29 @@
+<%- include("../starters/header") %>
+
+<div class="container">
+    <div class="row">
+        <h1>Edytuj informacje o turnieju!</h1>
+            <form method="POST" action="/tournaments/edit/<%= tournament.id %>">
+                <div class="form-group">
+                    Nazwa turnieju: <input class="form-control" type="text" name="tournament[name]" value="<%= tournament.name %>" required>
+                </div>
+                <div class="form-group">
+                    Czas rozpoczęcia: <input class="form-control" type="date" name="tournament[dates]" value="<%= tournament.dates %>" required>
+                </div>
+                <div class="form-group">
+                    Miejsce turnieju: <input class="form-control" type="text" name="tournament[place]" value="<%= tournament.place %>" required>
+                </div>
+                <div class="form-group">
+                    Liczba zawodników: <input class="form-control" type="number" name="tournament[limit]" value="<%= tournament.limit %>" min="1" required>
+                </div>
+                <div class="form-group">
+                    Czas zgłaszania się zawodników: <input class="form-control" type="date" name="tournament[deadline]" value="<%= tournament.deadline %>" required>
+                </div>
+                <div class="form-group">
+                    <input class="btn btn-lg btn-primary" type="submit" value="Edytuj informacje o turnieju">
+                </div>
+            </form>
+    </div>
+</div>
+
+<%- include("../starters/footer") %>

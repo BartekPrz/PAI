@@ -1,0 +1,20 @@
+<%- include("../starters/header") %>
+
+<div class="container">
+    <div class="row">
+        <h1>Dodaj sponsora do turnieju!</h1>
+            <form method="POST" action="/tournaments/<%= id %>/sponsor/new">
+                <div class="form-group">
+                    Nazwa sponsora: <input class="form-control" type="text" name="sponsor[name]" placeholder="Nazwa sponsora" required>
+                </div>
+                <div class="form-group">
+                    Sciezka do logo sponsora: <input class="form-control" type="text" name="sponsor[path]" placeholder="Logo sponsora" required>
+                </div>
+                <div class="form-group">
+                    <input class="btn btn-lg btn-primary" type="submit" value="Dodaj sponsora">
+                </div>
+            </form>
+    </div>
+</div>
+
+<%- include("../starters/footer") %>
