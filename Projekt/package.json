@@ -20,6 +20,6 @@
     "nodemailer": "^6.6.1",
     "passport": "^0.4.1",
     "passport-local": "^1.0.0",
-    "sequelize": "^5.21.11"
+    "sequelize": "^6.28.2"
   }
 }
